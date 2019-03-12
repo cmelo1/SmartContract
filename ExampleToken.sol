@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-import "openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
 
@@ -11,7 +11,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
  * All the operations are done using the smallest and indivisible token unit,
  * just as on Ethereum all the operations are done in wei.
  */
-contract ExampleToken is StandardToken, MintableToken, DetailedERC20 {
+contract ExampleToken is StandardToken, MintableToken, ERC20Detailed {
 
   //We inherited the DetailedERC20 
   constructor(string _name, string _symbol, uint8 _decimals) 
